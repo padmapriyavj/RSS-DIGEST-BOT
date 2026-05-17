@@ -11,7 +11,7 @@ DEFAULT_FEEDS = [
 @mcp.tool()
 def get_digest(limit: int) -> List[str]:
     """
-    Fetch up to `limit` items from your default RSS feeds.
+    Fetch up to `limit` items total from your default RSS feeds (not per feed).
     Returns a list of strings "title: link".
     """
     entries = fetch_and_parse(DEFAULT_FEEDS, limit)
